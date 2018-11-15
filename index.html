@@ -29,6 +29,18 @@
 
   <body id="page-top">
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <script>
+        // When the user scrolls down 20px from the top of the document, show the button window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block"; } else {
+        document.getElementById("myBtn").style.display = "none"; }
+        }   
+        function topFunction() { document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+      </script>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
@@ -165,7 +177,7 @@
           <div class="col-lg-8 mx-auto">
             <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
             <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <form method="POST" action="https://formspree.io/dskimkc24@gmail.com">
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Name</label>
@@ -199,11 +211,6 @@
               <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
               </div>
-              <form method="POST" action="https://formspree.io/dskimkc24@gmail.com">
-            </form>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Footer -->
