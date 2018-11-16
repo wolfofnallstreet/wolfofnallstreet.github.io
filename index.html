@@ -407,9 +407,10 @@
         </div>
       </div>
     </div>
-    
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-    <script>
+
+      <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+      <script>
       // Initialize Firebase
       var config = {
         apiKey: "AIzaSyDw8twkDOhjh1vSBk8QjGI3KGKVmzh9kF8",
@@ -420,6 +421,8 @@
         messagingSenderId: "40039991578"
       };
       firebase.initializeApp(config);
+      var db = firebase.firestore();
+
     </script>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
